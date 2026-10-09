@@ -35,15 +35,15 @@ conda install pyyaml tqdm psutil wandb plyfile numpy=2.4 matplotlib seaborn open
 
 # PyTorch и дополнительные зависимости
 
-pip install torch==2.5.1 torchvision==0.20.1 transformers==4.51.0 open_clip_torch==2.32.0 open3d==0.19.0 huggingface-hub==0.30.1 einops==0.8.1
+pip install torch==2.5.1 torchvision==0.20.1 transformers==4.51.0 open_clip_torch==2.32.0 open3d==0.19.0 huggingface-hub==0.30.1 einops==0.8.1  hydra-core==1.3.2 iopath
 
 # SAM2
 cd /<ovo_path>/thirdParty/segment-anything-2
-pip install -e .
+pip install -e .  --no-deps
 
 # Perception Encoder
 cd /<ovo_path>/thirdParty/perception_models
-pip install -e . --no-dependencies
+pip install -e .  --no-deps
 ```
 
 
