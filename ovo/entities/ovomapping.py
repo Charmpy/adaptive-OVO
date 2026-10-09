@@ -235,10 +235,37 @@ class OVOSemMap():
 
         self.save_representation()
 
+        keep_open = self.config["vis"].get("keep_open", False)
+
+        if stream and keep_open:
+            print("SLAM finished. Open3D visualization is still active.")
+            print("Close the Open3D window to finish.")
+
+            try:
+                while p.is_alive():
+                    if query_flag.value == 1:
+                        query = query_pipe.recv()
+
+                        with torch.inference_mode():
+                            query_map = self.ovo.query(query).cpu().numpy()
+
+                        query_map[query_map < 0] = 0
+
+                        with query_flag.get_lock():
+                            query_pipe.send(query_map)
+                            query_flag.value = 2
+
+                    time.sleep(0.1)
+
+            except KeyboardInterrupt:
+                print("Stopping visualization...")
+
         self.ovo.cpu()
         del self.slam_backbone, self.ovo
         torch.cuda.empty_cache()
 
-        if self.config["vis"].get("stream", False):
-            p.terminate()
-            
+        if stream:
+            if p.is_alive():
+                p.terminate()
+            p.join()
+                            
