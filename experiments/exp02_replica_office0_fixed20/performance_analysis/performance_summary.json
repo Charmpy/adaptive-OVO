@@ -1,0 +1,109 @@
+{
+  "logger_path": "data/output/Replica/exp02_replica_office0_fixed20/office0/logger",
+  "counts": {
+    "t_sam": 100,
+    "t_obj": 100,
+    "t_clip": 100,
+    "t_up": 100,
+    "n_matches": 100,
+    "vram": 100,
+    "ram": 100,
+    "spf": 100,
+    "frame_id": 200
+  },
+  "metrics": {
+    "t_sam": {
+      "count": 100,
+      "mean": 0.4435,
+      "median": 0.45,
+      "p95": 0.62,
+      "p99": 0.6506000000000003,
+      "min": 0.21,
+      "max": 0.71,
+      "sum": 44.35
+    },
+    "t_obj": {
+      "count": 100,
+      "mean": 0.07597000000000001,
+      "median": 0.069,
+      "p95": 0.10609999999999999,
+      "p99": 0.1347600000000014,
+      "min": 0.038,
+      "max": 0.408,
+      "sum": 7.597
+    },
+    "t_clip": {
+      "count": 100,
+      "mean": 0.16430000000000003,
+      "median": 0.15,
+      "p95": 0.2904999999999999,
+      "p99": 0.3802000000000001,
+      "min": 0.06,
+      "max": 0.4,
+      "sum": 16.430000000000003
+    },
+    "t_up": {
+      "count": 100,
+      "mean": 0.0008800000000000001,
+      "median": 0.001,
+      "p95": 0.002049999999999997,
+      "p99": 0.00404000000000002,
+      "min": 0.0,
+      "max": 0.008,
+      "sum": 0.08800000000000001
+    },
+    "n_matches": {
+      "count": 100,
+      "mean": 317451.44,
+      "median": 320750.5,
+      "p95": 448421.35,
+      "p99": 471251.63,
+      "min": 157168.0,
+      "max": 472997.0,
+      "sum": 31745144.0
+    },
+    "vram": {
+      "count": 100,
+      "mean": 11.137440936960001,
+      "median": 11.406065152,
+      "p95": 11.434111232,
+      "p99": 11.44797445632,
+      "min": 8.632538112,
+      "max": 11.449500672,
+      "sum": 1113.7440936960002
+    },
+    "ram": {
+      "count": 100,
+      "mean": 3.02032551936,
+      "median": 3.031269376,
+      "p95": 3.2388151296,
+      "p99": 3.24972204032,
+      "min": 2.76555776,
+      "max": 3.255062528,
+      "sum": 302.032551936
+    },
+    "spf": {
+      "count": 100,
+      "mean": 0.6636282873153686,
+      "median": 0.6642565727233887,
+      "p95": 0.8612043976783751,
+      "p99": 0.9622378826141361,
+      "min": 0.40179872512817383,
+      "max": 1.0277657508850098,
+      "sum": 66.36282873153687
+    }
+  },
+  "derived": {
+    "sum_sam_obj_clip_up_seconds": 68.465,
+    "sum_sam_obj_seconds": 51.94700000000001,
+    "sum_clip_up_seconds": 16.518000000000008,
+    "note": "Sum of separately timed stages; not end-to-end wall time and may omit overhead.",
+    "avg_fps": 0.7189906352720441,
+    "max_vram": 11.542437376,
+    "max_ram": 3.255062528
+  },
+  "alignment": "unverified",
+  "warnings": [
+    "frame_id has no event-type labels; exact stage-to-frame assignment cannot be guaranteed from separate logs"
+  ]
+}
