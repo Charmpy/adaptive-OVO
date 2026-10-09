@@ -1,0 +1,68 @@
+Loaded 2000 frames
+Loading SAM2.1
+Semantic config
+{'clip': {'embed_type': 'learned',
+          'fusion': 'l1_medoid',
+          'k_top_views': 10,
+          'mask_res': 384,
+          'model_card': 'SigLIP-384',
+          'mv_fuser': False,
+          'mv_fuser_ckpt': '20250725_1200',
+          'use_half': False,
+          'weights_predictor_path': 'data/input/weights_predictor/base'},
+ 'debug_info': True,
+ 'depth_filter': True,
+ 'kf_queue_delay': 10,
+ 'log': True,
+ 'match_distance_th': 0.05,
+ 'sam': {'masks_base_path': 'data/working/masks/replica_384_sam2.1_16',
+         'multi_crop': True,
+         'points_per_side': 16,
+         'precomputed': False,
+         'sam_ckpt_path': 'data/input/sam_ckpts/',
+         'sam_encoder': 'hiera_l',
+         'sam_version': '2.1'},
+ 'segment_every': 10,
+ 'track_th': 100,
+ 'use_gt_clips': False,
+ 'use_gt_masks': False}
+{'frame_id': 0, 'n_matches': 199109, 'n_obj': [20], 't_obj': 0.551, 't_sam': 0.65}
+{'frame_id': 10, 'n_matches': 179949, 'n_obj': [5], 't_obj': 0.067, 't_sam': 0.55}
+{'frame_id': 20, 'n_matches': 177466, 'n_obj': [0], 't_obj': 0.052, 't_sam': 0.6}
+{'frame_id': 30, 'n_matches': 182907, 'n_obj': [1], 't_obj': 0.053, 't_sam': 0.53}
+{'frame_id': 40, 'n_matches': 192662, 'n_obj': [0], 't_obj': 0.053, 't_sam': 0.54}
+{'frame_id': 50, 'n_matches': 200159, 'n_obj': [1], 't_obj': 0.056, 't_sam': 0.47}
+{'frame_id': 60, 'n_matches': 197223, 'n_obj': [0], 't_obj': 0.053, 't_sam': 0.46}
+{'frame_id': 70, 'n_matches': 202140, 'n_obj': [1], 't_obj': 0.057, 't_sam': 0.46}
+{'frame_id': 80, 'n_matches': 224107, 'n_obj': [3], 't_obj': 0.061, 't_sam': 0.56}
+{'frame_id': 90, 'n_matches': 248850, 'n_obj': [6], 't_obj': 0.071, 't_sam': 0.76}
+{'frame_id': 0, 't_clip': 0.66, 't_up': 0.001}
+{'frame_id': 10, 't_clip': 0.62, 't_up': 0.0}
+{'frame_id': 20, 't_clip': 0.59, 't_up': 0.0}
+{'frame_id': 30, 't_clip': 0.59, 't_up': 0.0}
+{'frame_id': 40, 't_clip': 0.53, 't_up': 0.0}
+{'frame_id': 50, 't_clip': 0.56, 't_up': 0.0}
+{'frame_id': 60, 't_clip': 0.53, 't_up': 0.0}
+{'frame_id': 70, 't_clip': 0.5, 't_up': 0.0}
+{'frame_id': 80, 't_clip': 0.56, 't_up': 0.0}
+{'frame_id': 90, 't_clip': 0.68, 't_up': 0.0}
+/root/repo/adaptive-OVO/ovo/entities/logger.py:102: RuntimeWarning: Mean of empty slice
+  stats = {f"Avg {key}": np.asarray(stat).mean().round(3) for key, stat in self.stats.items() if key not in ["frame_id", "max_vram", "max_ram"] }
+/root/miniconda3/envs/ovo/lib/python3.11/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+Final statistics:
+{'Avg avg_fps': np.float64(0.635),
+ 'Avg n_matches': np.float64(200457.2),
+ 'Avg n_obj': np.float64(3.7),
+ 'Avg ram': np.float64(2.78),
+ 'Avg spf': np.float64(0.667),
+ 'Avg t_clip': np.float64(0.582),
+ 'Avg t_obj': np.float64(0.107),
+ 'Avg t_sam': np.float64(0.558),
+ 'Avg t_seg': np.float64(nan),
+ 'Avg t_up': np.float64(0.0),
+ 'Avg vram': np.float64(8.703),
+ 'Max RAM': np.float64(2.8),
+ 'Max vRAM': 10.77}
+Finished run.✨
+Scene office0 took: 45.05
